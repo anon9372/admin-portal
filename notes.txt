@@ -1,0 +1,10 @@
+PAGES:
+
+1) Login 
+2) Register 
+
+3) Dashboard 
+4) Users  --> Edit User
+5) Products --> Edit Products
+
+6) Signout
