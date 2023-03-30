@@ -6,6 +6,8 @@ import Register from './pages/register'
 import Dasboard from './pages/dashboard';
 import Users from './pages/users';
 import Products from './pages/products';
+import AdminLayout from './layout/admin';
+import './styles/styles.css'
 
 function App() {
   return (
@@ -17,11 +19,13 @@ function App() {
 
           <Route path='/register' element={<Register />} />
 
-          <Route exact path='/' element={<Dasboard />} />
+          <Route element={<AdminLayout />}>
+            <Route exact path='/' element={<Dasboard />} />
 
-          <Route path='/users' element={<Users />} />
+            <Route path='/users' element={<Users />} />
 
-          <Route path='/produts' element={<Products />} />
+            <Route path='/products' element={<Products />} />
+          </Route>
 
         </Routes>
       </Router>

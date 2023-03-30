@@ -5,8 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-
-
     const navigate = useNavigate()
 
     const [email, setEmail] = useState('')
@@ -28,9 +26,9 @@ const Login = () => {
     }
 
     return (
-        <section id='login-page'>
-            <div className='d-flex bg-warning align-items-center justify-content-center' style={{ height: '100vh' }}>
-                <div className='col-6 d-flex justify-content-center'>
+        <section id='login-page' className='bg-warning d-flex  justify-content-center align-content-center g-5' style={{ height: '100vh' }}>
+            <div className='row align-items-center justify-content-center gap-5'>
+                <div className='col-auto'>
                     <form onSubmit={handleSubmit}>
                         <ToastContainer />
                         <h2>Login</h2>
@@ -50,7 +48,7 @@ const Login = () => {
                         </div>
                     </form>
                 </div>
-                <div className='col-6 d-flex justify-content-center'>
+                <div className='col-auto'>
                     <img src='/assets/images/login.png' alt='login-image' />
                 </div>
             </div>
