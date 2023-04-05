@@ -8,3 +8,9 @@ PAGES:
 5) Products --> Edit Products
 
 6) Signout
+
+=============
+
+> reduce method
+> useReducer hook 
+> redux 

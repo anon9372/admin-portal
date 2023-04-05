@@ -2,7 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Login from './pages/login';
-import Register from './pages/register'
+// import Register from './pages/register'
+import Register from './pages/registerRedux'
 import Dasboard from './pages/dashboard';
 import Users from './pages/users';
 import Products from './pages/products';
