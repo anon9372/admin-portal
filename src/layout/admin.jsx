@@ -6,7 +6,6 @@ import { isEmpty } from 'lodash'
 
 const AdminLayout = () => {
     const user = localStorage.getItem('user')
-    console.log('admin layout user', user)
     return (
         <div className='d-flex'>
             {!isEmpty(user) &&

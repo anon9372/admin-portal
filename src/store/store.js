@@ -25,8 +25,6 @@ const storeReducer = (state = initialState, action) => {
     }
     return state
 }
-
-// functions to update localStore Not mandatory=======================
 const loadState = () => {
     try {
         const loadedState = localStorage.getItem('admin')
