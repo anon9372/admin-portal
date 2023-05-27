@@ -3,9 +3,10 @@ import { createStore } from "redux";
 
 // Create initial state=======================
 const initialState = {
-    email: '',
+    email: 'anil@gmail.com',
     name: '',
     password: '',
+    toggle: false
 }
 
 // Create Store Reducer=======================
@@ -19,10 +20,13 @@ const storeReducer = (state = initialState, action) => {
     if (action.type === "PASSWORD") {
         return { ...state, password: action.payload }
     }
+    if (action.type === "TOGGLE") {
+        return { ...state, toggle: !state.toggle }
+    }
     return state
 }
 
-// functions to update localStore=======================
+// functions to update localStore Not mandatory=======================
 const loadState = () => {
     try {
         const loadedState = localStorage.getItem('admin')

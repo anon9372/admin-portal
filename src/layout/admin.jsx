@@ -1,14 +1,21 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Menu from '../components/menu'
+// import _ from 'lodash'
+import { isEmpty } from 'lodash'
+
 const AdminLayout = () => {
+    const user = localStorage.getItem('user')
+    console.log('admin layout user', user)
     return (
         <div className='d-flex'>
-            <Menu />
-            <div>
-                <Outlet />
-            </div>
-
+            {!isEmpty(user) &&
+                <div>
+                    <Menu />
+                    <div>
+                        <Outlet />
+                    </div>
+                </div>}
         </div>
     )
 }

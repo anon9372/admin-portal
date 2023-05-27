@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Products = () => {
+
+    const [productsList, setProductsList] = useState([])
+
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                let myProducts = await fetch('url')
+                let res = myProducts.json()
+                setProductsList(res)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
+    }, [])
     return (
         <div>
-            Products Page
+            {
+                productsList.map((p) => {
+                    return (
+                        <p>{p.name}</p>
+                    )
+                })
+            }
         </div>
     )
 }

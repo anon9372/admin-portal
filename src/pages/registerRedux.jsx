@@ -10,9 +10,9 @@ const Register = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [name, setName] = useState('')
+    const [email, setEmail] = useState(entity.email)
+    const [name, setName] = useState(entity.name)
+    const [password, setPassword] = useState(entity.password)
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const handleSubmit = (e) => {
@@ -21,6 +21,7 @@ const Register = () => {
         dispatch({ type: "EMAIL", payload: email })
         dispatch({ type: "NAME", payload: name })
         dispatch({ type: "PASSWORD", payload: password })
+        dispatch({ type: "TOGGLE" })
     }
 
     return (
