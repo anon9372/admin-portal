@@ -50,7 +50,6 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('state', state)
         const { name, email, password } = state
         if (email.length > 5 && (password === confirmPassword)) {
             let newObj = { email, name }

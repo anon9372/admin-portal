@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 const Dasboard = () => {
 
     const entity = useSelector(state => state)
-    console.log('hello entity', entity)
 
     return (
         <div>
